@@ -1,0 +1,20 @@
+<template>
+  <h1 class="border-2 border-shopperly-green-400 rounded text-xl md:text-2xl text-shopperly-green-400 px-3 py-1 rounded-2xl rounded-tl-none">
+    {{ name }}
+  </h1>
+</template>
+
+<script>
+export default {
+  props: {
+    name: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>

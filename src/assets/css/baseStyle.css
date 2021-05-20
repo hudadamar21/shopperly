@@ -1,0 +1,33 @@
+@font-face {
+  font-family: aBusterDown;
+  src: url(../fonts/aBusterDown.ttf);
+}
+
+h1.brand {
+  font-family: aBusterDown, Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --navigation-slider-size: 40px;
+}
+
+.swiper-button-prev {
+  background: #fff;
+  height: var(--navigation-slider-size);
+  width: var(--navigation-slider-size);
+  border-radius: 100%;
+  background-image: url(../icons/arrow-left.svg) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.swiper-button-next {
+  background: #fff;
+  height: var(--navigation-slider-size);
+  width: var(--navigation-slider-size);
+  border-radius: 100%;
+  background-image: url(../icons/arrow-right.svg) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
