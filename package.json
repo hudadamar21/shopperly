@@ -1,5 +1,5 @@
 {
-  "name": "ecommerce-app",
+  "name": "shopperly",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -7,6 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.2.0",
     "swiper": "^6.6.2",
     "vue": "^3.0.5"
   },

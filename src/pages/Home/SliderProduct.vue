@@ -1,11 +1,16 @@
 <template>
   <!-- Slider Product -->
   <SwiperSlider 
-    classSwiper="h-[300px] rounded-lg rounded-br-[5rem] rounded-tl-[4rem]"
+    classSwiper="h-[350px] rounded-lg rounded-br-[5rem] rounded-tl-[4rem]"
+    classSlide="bg-shopperly-green-100"
     :slideSpeed="1000"
     :autoplay="true"
     :data="sliderData"
-  />
+  >
+    <template #body="{ slideData }">
+      {{ slideData.text }} 
+    </template>
+  </SwiperSlider>
 </template>
 
 <script>

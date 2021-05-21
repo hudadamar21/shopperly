@@ -5,6 +5,7 @@
     :spaceBetween="10"
     :slidesPerView="slideCount"
     :speed="slideSpeed"
+    :loop="true"
     :autoplay="autoplay ? {
       delay: 10000,
       disableOnInteraction: false,
@@ -16,10 +17,12 @@
     }"
   >
     <swiper-slide
-      :class="['slider', classSlide]"
+      class="flex items-center justify-center"
+      :class="classSlide"
       v-for="(slide, index) in data"
       :key="index"
-      >{{ slide.text }}
+    >
+    <slot name="body" :slideData="slide" ></slot>
     </swiper-slide>
   </swiper>
 </template>
@@ -61,8 +64,29 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
-.slider {
-  @apply flex items-center justify-center bg-shopperly-green-100
+<style lang="postcss" >
+.swiper {
+  --navigation-slider-size: 40px;
+}
+
+.swiper-button-prev {
+  background: #fff;
+  height: var(--navigation-slider-size);
+  width: var(--navigation-slider-size);
+  border-radius: 100%;
+  background-image: url(../assets/icons/arrow-left.svg) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.swiper-button-next {
+  background: #fff;
+  height: var(--navigation-slider-size);
+  width: var(--navigation-slider-size);
+  border-radius: 100%;
+  background-image: url(../assets/icons/arrow-right.svg) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 </style>

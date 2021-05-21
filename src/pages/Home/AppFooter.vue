@@ -4,7 +4,7 @@
     <div class="md:p-10 py-10 flex flex-col md:flex-row justify-between items-start md:items-center">
       <div class="flex flex-col md:flex-row gap-5 md:gap-16 mb-10 md:mb-0">
         <div>
-          <h3 class="text-lg font-semibold">LOGO NAME</h3>
+          <h1 class="brand text-4xl text-shopperly-green-400">Shopperly</h1>
           <ul>
             <li>Tentang Kami</li>
             <li>Blog</li>
@@ -26,17 +26,17 @@
           </ul>
         </div>
         <div class="text-center">
-          <h3 class="text-lg font-semibold">Follow Us</h3>
+          <h3 class="text-lg font-semibold mb-1">Follow Us</h3>
           <ul class="flex items-center gap-2">
-            <li class="bg-shopperly-green-400 h-10 w-10"></li>
-            <li class="bg-shopperly-green-400 h-10 w-10"></li>
-            <li class="bg-shopperly-green-400 h-10 w-10"></li>
-            <li class="bg-shopperly-green-400 h-10 w-10"></li>
+            <li class="bg-shopperly-green-400 h-10 w-10 rounded-full"></li>
+            <li class="bg-shopperly-green-400 h-10 w-10 rounded-full"></li>
+            <li class="bg-shopperly-green-400 h-10 w-10 rounded-full"></li>
+            <li class="bg-shopperly-green-400 h-10 w-10 rounded-full"></li>
           </ul>
         </div>
       </div>
 
-      <div class="bg-shopperly-green-400 h-[250px] w-[250px]">
+      <div class="bg-shopperly-green-400 h-[250px] w-[250px] rounded">
 
       </div>
     </div>

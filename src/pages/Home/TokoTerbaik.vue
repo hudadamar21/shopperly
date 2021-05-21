@@ -1,13 +1,13 @@
 <template>
   <!-- Toko Terbaik -->
-  <section class="mt-10">
+  <section class="mt-24">
     <div class="w-full flex justify-center mb-5">
       <section-title name="Toko Terbaik"/>
     </div>
     <!-- Slider Product -->
     <SwiperSlider 
-      classSwiper="h-[300px] pb-1"
-      classSlide="rounded-md shadow"
+      classSwiper="h-[300px] "
+      classSlide="rounded-md shadow pb-1 bg-shopperly-green-100"
       :slideCount="3"
       :data="sliderData"
     />
