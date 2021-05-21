@@ -9,6 +9,7 @@
       classSwiper="h-[300px] "
       classSlide="rounded-md shadow pb-1 bg-shopperly-green-100"
       :slideCount="3"
+      withPagination
       :data="sliderData"
     />
   </section>

@@ -4,7 +4,8 @@
     classSwiper="h-[350px] rounded-lg rounded-br-[5rem] rounded-tl-[4rem]"
     classSlide="bg-shopperly-green-100"
     :slideSpeed="1000"
-    :autoplay="true"
+    autoplay 
+    withPagination
     :data="sliderData"
   >
     <template #body="{ slideData }">

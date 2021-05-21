@@ -11,10 +11,10 @@
       disableOnInteraction: false,
     } : false"
     :navigation="true"
-    :pagination="{
+    :pagination="withPagination ? {
       dynamicBullets: true,
       clickable: true,
-    }"
+    } : false"
   >
     <swiper-slide
       class="flex items-center justify-center"
@@ -45,23 +45,27 @@ export default {
     SwiperSlide,
   },
   props: {
+    // class
     classSwiper: String,
     classSlide: String,
+
+    // options
+    autoplay: Boolean,
+    withPagination: Boolean,
     slideSpeed: {
       type: Number,
       default: 300,
-    },
-    autoplay: Boolean,
-    data: {
-      type: Array,
-      required: true,
     },
     slideCount: {
       type: Number,
       default: 1,
     },
-  },
-  methods: {
+
+    // data
+    data: {
+      type: Array,
+      required: true,
+    },
   },
 };
 </script>
@@ -69,6 +73,7 @@ export default {
 <style lang="postcss" >
 .swiper {
   --navigation-slider-size: 40px;
+  --swiper-theme-color: #fcfcfc;
 }
 
 .swiper-button-prev {
