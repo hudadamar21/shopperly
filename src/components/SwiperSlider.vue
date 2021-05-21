@@ -35,7 +35,9 @@ import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper/core";
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 // Import Swiper styles
-import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css"
+import "swiper/components/navigation/navigation.min.css";
+import "swiper/components/pagination/pagination.min.css";
 
 export default {
   components: {
@@ -88,5 +90,14 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.swiper-button-next:after,.swiper-button-prev:after{
+  font-family: '' !important;
+}
+.swiper-button-prev:after,.swiper-container-rtl .swiper-button-next:after{
+  content:'' !important;
+}
+.swiper-button-next:after,.swiper-container-rtl .swiper-button-prev:after{
+  content:'' !important;
 }
 </style>
