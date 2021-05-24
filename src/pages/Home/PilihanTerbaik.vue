@@ -8,17 +8,24 @@
     </div>
     <div class="absolute w-[75%] top-1/2 transform -translate-y-1/2 right-0 md:h-2/3">
       <SwiperSlider 
-        classSwiper="h-[200px] md:h-[385px] px-1"
-        classSlide="rounded-md"
-        :slideCount="3"
+        classSwiper="h-[385px] px-1"
+        classSlide="rounded-md "
+        withNavigation
+        withLoopSlider
+        :slideCount="2"
+        :breakpoints="{
+          768: {
+            slidesPerView: 3
+          }
+        }"
         :data="sliderData"
       >
-        <template #body="{ slideData: { title, harga, rating, terjual }}"> 
+        <template #body="{ slideData: { title, price, rating, sold }}"> 
           <ProdukCard
             :title="title"
-            :harga="harga"
+            :price="price"
             :rating="rating"
-            :terjual="terjual"
+            :sold="sold"
           />
         </template>
       </SwiperSlider>
@@ -42,33 +49,33 @@ export default {
     const sliderData = reactive([
         {
           title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta placeat beatae neque laborum labore.',
-          harga: '1000000',
-          rating: '5.0',
-          terjual: 1000
+          price: 1000000,
+          rating: 5.0,
+          sold: 1000
         },
         {
           title: 'adipisicing elit. Explicabo dicta placeat beatae neque laborum labore.',
-          harga: '1000000',
-          rating: '5.0',
-          terjual: 1000
+          price: 1000000,
+          rating: 5.0,
+          sold: 1000
         },
         {
           title: 'dolor sit amet consectetur adipisicing elit. icta placeat beatae neque laborum labore.',
-          harga: '1000000',
-          rating: '5.0',
-          terjual: 1000
+          price: 1000000,
+          rating: 5.0,
+          sold: 1000
         },
         {
           title: 'Explicabo dicta placeat beatae neque laborum labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
-          harga: '1000000',
-          rating: '5.0',
-          terjual: 1000
+          price: 1000000,
+          rating: 5.0,
+          sold: 1000
         },
         {
           title: 'beatae neque laborum labore Explicabo dicta placeat beatae neque laborum labore.',
-          harga: '1000000',
-          rating: '5.0',
-          terjual: 1000
+          price: 1000000,
+          rating: 5.0,
+          sold: 1000
         },
       ])
     return {
@@ -77,7 +84,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

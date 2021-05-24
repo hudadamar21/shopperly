@@ -1,7 +1,7 @@
 <template>
   <navbar/>
 
-  <section class="container px-5 md:px-16 m-auto mb-10 text-shopperly-gray-700">
+  <section class="container px-5 md:px-10 lg:px-16 m-auto mb-10 text-shopperly-gray-700 w-full">
     <slider-product/>
     <kategori-product/>
     <product-populer/>
@@ -36,8 +36,3 @@ export default {
   }
 }
 </script>
-
-<style
-    KategoriProduct>
-
-</style>

@@ -2,19 +2,20 @@
   <swiper
     class="swiper"
     :class="classSwiper"
-    :spaceBetween="10"
+    :spaceBetween="spaceBetween"
     :slidesPerView="slideCount"
     :speed="slideSpeed"
-    :loop="true"
+    :loop="withLoopSlider"
     :autoplay="autoplay ? {
       delay: 10000,
       disableOnInteraction: false,
     } : false"
-    :navigation="true"
+    :navigation="withNavigation"
     :pagination="withPagination ? {
       dynamicBullets: true,
       clickable: true,
     } : false"
+    :breakpoints="breakpoints"
   >
     <swiper-slide
       class="flex items-center justify-center"
@@ -22,7 +23,19 @@
       v-for="(slide, index) in data"
       :key="index"
     >
-    <slot name="body" :slideData="slide" ></slot>
+      <slot name="body" :slideData="slide"></slot>
+    </swiper-slide>
+    <swiper-slide
+      v-if="lookMoreTo"
+      class="flex items-center justify-center"
+      :class="classSlide"
+    >
+      <div class="bg-white rounded-md shadow-md border border-gray-300 h-[310px] md:h-[375px] w-full overflow-hidden text-shopperly-gray-800 grid place-items-center">
+        
+        <router-link :to="lookMoreTo" class="px-3 py-1 rounded-md text-shopperly-green-400 font-semibold hover:underline">
+          Lihat lebih banyak
+        </router-link>
+      </div>
     </swiper-slide>
   </swiper>
 </template>
@@ -52,13 +65,27 @@ export default {
     // options
     autoplay: Boolean,
     withPagination: Boolean,
+    withNavigation: Boolean,
+    withLoopSlider: Boolean,
+    lookMoreTo: {
+      type: [String, Object, Boolean],
+      default: false
+    },
     slideSpeed: {
       type: Number,
       default: 300,
     },
-    slideCount: {
+    spaceBetween: {
       type: Number,
+      default: 10
+    },
+    slideCount: {
+      type: [String, Number],
       default: 1,
+    },
+    breakpoints: {
+      type: Object,
+      default: {}
     },
 
     // data
@@ -85,6 +112,7 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
 }
 .swiper-button-next {
   background: #fff;
@@ -95,7 +123,11 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
 }
+.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{
+  opacity:0;cursor:auto;pointer-events:none
+  }
 .swiper-button-next:after,.swiper-button-prev:after{
   font-family: '' !important;
 }

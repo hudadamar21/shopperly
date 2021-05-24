@@ -1,7 +1,7 @@
 <template>
   <footer class="p-10 md:p-20 bg-shopperly-green-100 w-full text-shopperly-gray-700">
     <div class="w-full h-1 bg-shopperly-green-300"></div>
-    <div class="md:p-10 py-10 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div class="lg:p-10 py-10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-5">
       <div class="flex flex-col md:flex-row gap-5 md:gap-16 mb-10 md:mb-0">
         <div>
           <h1 class="brand text-4xl text-shopperly-green-400">Shopperly</h1>

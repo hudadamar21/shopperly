@@ -8,8 +8,14 @@
     <SwiperSlider 
       classSwiper="h-[300px] "
       classSlide="rounded-md shadow pb-1 bg-shopperly-green-100"
-      :slideCount="3"
+      :slideCount="2"
       withPagination
+      withLoopSlider
+      :breakpoints="{
+          768: {
+            slidesPerView: 3
+          }
+        }"
       :data="sliderData"
     />
   </section>
