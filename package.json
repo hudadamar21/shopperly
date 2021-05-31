@@ -1,6 +1,11 @@
 {
   "name": "shopperly",
   "version": "0.0.0",
+  "description": "ecommerce app",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/hudadamar21/shopperly"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
