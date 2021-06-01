@@ -8,6 +8,7 @@ import IconGoogle from "./IconGoogle.vue";
 import IconFacebook from "./IconFacebook.vue";
 import IconBack from "./IconBack.vue";
 import IconShowPassword from "./IconShowPassword.vue";
+import IconStar from "./IconStar.vue";
 
 
 export {
@@ -20,5 +21,6 @@ export {
   IconGoogle,
   IconFacebook,
   IconBack,
-  IconShowPassword
+  IconShowPassword,
+  IconStar
 }

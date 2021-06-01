@@ -3,7 +3,7 @@
   src: url(../fonts/aBusterDown.ttf);
 }
 
-h1.brand {
+.brand {
   font-family: aBusterDown, Arial, Helvetica, sans-serif;
 }
 

@@ -2,7 +2,9 @@
   <nav class="relative h-20 bg-white flex items-center justify-evenly text-gray-700 rounded-b-3xl shadow mb-10 px-6 md:px-10">
 
     <!-- Brand Title -->
-    <h1 class="brand hidden md:block text-3xl md:text-5xl pr-5 text-gradient bg-gradient-to-r from-shopperly-blue to-shopperly-green-300">Shopperly</h1>
+    <router-link to="/" class="brand hidden md:block text-3xl md:text-5xl pr-5 text-gradient bg-gradient-to-r from-shopperly-blue to-shopperly-green-300">
+      Shopperly
+    </router-link>
 
     <!-- Search Product -->
     <div class="relative flex-grow">
@@ -62,8 +64,8 @@ import {
   IconToko, 
   IconUser,
   IconSearch
-} from '../../components/icons';
-import Keranjang from '../../components/Keranjang.vue';
+} from '@/components/icons';
+import Keranjang from '@/components/Keranjang.vue';
 
 export default {
   components: { 

@@ -6,7 +6,7 @@
     </div>
     <!-- Slider Product -->
     <SwiperSlider 
-      classSwiper="h-[300px] "
+      classSwiper="h-[300px]"
       classSlide="rounded-md shadow pb-1 bg-shopperly-green-100"
       :slideCount="2"
       withPagination
@@ -24,8 +24,8 @@
 <script>
 import { reactive } from "vue";
 
-import SwiperSlider from "../../components/SwiperSlider.vue";
-import SectionTitle from "../../components/SectionTitle.vue";
+import SwiperSlider from "@/components/SwiperSlider.vue";
+import SectionTitle from "@/components/SectionTitle.vue";
 
 export default {
   components: {

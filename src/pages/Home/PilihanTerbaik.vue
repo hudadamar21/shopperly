@@ -37,8 +37,8 @@
 <script>
 import { reactive } from "vue";
 
-import SwiperSlider from "../../components/SwiperSlider.vue";
-import ProdukCard from "../../components/ProdukCard.vue";
+import SwiperSlider from "@/components/SwiperSlider.vue";
+import ProdukCard from "@/components/ProdukCard.vue";
 
 export default {
   components: {

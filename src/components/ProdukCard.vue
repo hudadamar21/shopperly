@@ -1,8 +1,12 @@
 <template>
   <div class="bg-white rounded-md shadow-md border border-gray-300 h-[310px] md:h-[375px] w-full overflow-hidden text-shopperly-gray-800 ">
+
+    <!-- Image Product -->
     <div class="h-[60%] md:h-[65%] w-full bg-gradient-to-br from-shopperly-green-400 to-shopperly-green-300">
       <img src="" alt="">
     </div>
+
+    <!-- Description Product -->
     <div class="p-3 h-[50%] md:h-[45%]">
       <h1 class="line-clamp-2 text-sm md:text-base">{{ title }}</h1>
       <p class="font-semibold my-1">{{ resultPrice }}</p>
@@ -16,13 +20,14 @@
         <p>Terjual {{ resultSold }}</p>
       </div>
     </div>
+
   </div>
 </template>
 
 <script>
-import IconStar from "./icons/IconStar.vue";
-import { formatPrice, formatSold } from "@/utils/format";
 import { computed } from 'vue';
+import { formatPrice, formatSold } from "@/utils/format";
+import IconStar from "./icons/IconStar.vue";
 
 export default {
   components: {

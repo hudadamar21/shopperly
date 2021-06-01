@@ -31,7 +31,6 @@
       :class="classSlide"
     >
       <div class="bg-white rounded-md shadow-md border border-gray-300 h-[310px] md:h-[375px] w-full overflow-hidden text-shopperly-gray-800 grid place-items-center">
-        
         <router-link :to="lookMoreTo" class="px-3 py-1 rounded-md text-shopperly-green-400 font-semibold hover:underline">
           Lihat lebih banyak
         </router-link>

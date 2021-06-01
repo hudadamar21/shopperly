@@ -1,18 +1,23 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import Home from "@/pages/Home/index.vue";
+import Product from "@/pages/Product/index.vue";
 
 // Auth
 import Signup from "@/pages/Authentication/Signup/index.vue";
 import Login from "@/pages/Authentication/Login/index.vue";
 import ForgetPassword from "@/pages/Authentication/ForgetPassword/index.vue";
 
-
 const routes = [
   { 
     path: '/',
     name: 'home',
     component: Home 
+  },
+  {
+    path: '/product/:name',
+    name: 'product',
+    component: Product
   },
   { 
     path: '/signup',

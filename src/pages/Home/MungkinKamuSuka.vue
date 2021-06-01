@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import SectionTitle from '../../components/SectionTitle.vue'
-import ProdukCard from "../../components/ProdukCard.vue";
+import SectionTitle from '@/components/SectionTitle.vue'
+import ProdukCard from "@/components/ProdukCard.vue";
 export default {
   components: { SectionTitle, ProdukCard },
 

@@ -35,7 +35,7 @@
 <script>
 import { reactive } from 'vue'
 
-import SwiperSlider from "../../components/SwiperSlider.vue";
+import SwiperSlider from "@/components/SwiperSlider.vue";
 
 export default {
   components: {

@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute top-full mt-1 right-40 p-3 bg-white shadow-md border rounded min-h-32 w-1/3 z-10">
+  <div class="absolute top-full mt-1 md:right-40 p-3 mx-1 bg-white shadow-md border rounded min-h-32 min-w-1/3 z-10">
     <div class="text-gray-700">
 
       <!-- title and see more -->
@@ -9,7 +9,7 @@
       </div>
 
       <!-- product list on cart -->
-      <div class="my-1">
+      <div class="my-1 pr-3 max-h-[25rem] overflow-auto">
         <div v-for="(product, i) of keranjangProductList" :key="i" class="border-b flex items-center justify-between py-2">
           <div class="flex">
             <img src="#" class="bg-gray-300 w-16 h-16 object-cover">
@@ -33,6 +33,21 @@ import { formatPrice } from "@/utils/format";
 export default {
   setup(){
     const productLists = reactive([
+      {
+        title: 'Title yang kepanjangan ya haha',
+        jumlah: 200,
+        price: 1200000000
+      },
+      {
+        title: 'Title lumayan panjang',
+        jumlah: 200,
+        price: 2000000
+      },
+      {
+        title: 'Title biasa',
+        jumlah: 5,
+        price: 100000
+      },
       {
         title: 'Title yang kepanjangan ya haha',
         jumlah: 200,
