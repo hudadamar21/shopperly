@@ -1,7 +1,7 @@
 <template>
   <!-- Product Populer -->
   <section class="mt-24 flex flex-col items-center">
-    <SectionTitle name="Produk Populer"/>
+    <SectionTitle name="Lainnya dari toko ini"/>
     <div class="flex items-center justify-evenly w-full mt-3 flex-wrap">
       <SwiperSlider 
         classSwiper="h-[385px] px-1"
@@ -38,7 +38,7 @@ import SectionTitle from "@/components/SectionTitle.vue";
 import ProdukCard from "@/components/ProdukCard.vue";
 import SwiperSlider from "@/components/SwiperSlider.vue";
 
-import jaket_red from '@/assets/images/jaket_red.jpg';
+import jaket_navy from '@/assets/images/jaket_navy.jpg';
 
 import { reactive } from 'vue';
 export default {
@@ -52,7 +52,7 @@ export default {
         {
           id: 1,
           title: 'Jaket Sweater Hoodie Zipper Polos Pria',
-          image: jaket_red,
+          image: jaket_navy,
           price: 80000,
           rating: 4.5,
           sold: 1000

@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-white rounded-md shadow-md border border-gray-300 h-[310px] md:h-[375px] w-full overflow-hidden text-shopperly-gray-800 ">
+  <div class="bg-white rounded-md shadow-md border border-gray-300 h-[310px] md:h-[375px] w-full overflow-hidden text-shopperly-gray-800 cursor-pointer" @click="openProductDetail">
 
     <!-- Image Product -->
-    <div class="h-[60%] md:h-[65%] w-full bg-gradient-to-br from-shopperly-green-400 to-shopperly-green-300">
-      <img src="" alt="">
+    <div class="h-[60%] md:h-[65%] overflow-hidden w-full bg-gradient-to-br from-shopperly-green-400 to-shopperly-green-300">
+      <img :src="image" alt="product image">
     </div>
 
     <!-- Description Product -->
@@ -13,7 +13,7 @@
       <div class="text-gray-500 text-xs md:text-sm flex items-center">
         <p class="flex items-center">
           <!-- star -->
-          <icon-star/>
+          <icon-star class="text-yellow-400"/>
           {{ rating.toFixed(1) }}
         </p>
         <span class="px-1">|</span>
@@ -26,6 +26,8 @@
 
 <script>
 import { computed } from 'vue';
+import { useRouter } from 'vue-router'
+
 import { formatPrice, formatSold } from "@/utils/format";
 import IconStar from "./icons/IconStar.vue";
 
@@ -44,6 +46,11 @@ export default {
       required: true,
       default: 0
     },
+    image: {
+      type: String,
+      required: true,
+      default: ''
+    },
     rating: {
       type: Number,
       required: true,
@@ -55,13 +62,24 @@ export default {
       default: 0
     }
   },
+  mounted() {
+    console.log(this.image)
+  },
   setup(props){
+    const router = useRouter()
+
     const resultPrice = computed(() => formatPrice(props.price))
     const resultSold = computed(() => formatSold(props.sold))
-
+    const openProductDetail = () => {
+      router.push({ 
+        name: 'product', 
+        params: { name: props.title }
+      })
+    }
     return {
       resultPrice,
-      resultSold
+      resultSold,
+      openProductDetail
     }
   }
 }

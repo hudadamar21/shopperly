@@ -1,46 +1,55 @@
 <template>
-  <div class="pt-5 flex w-[80%]">
+  <div class="pt-5 flex flex-col items-center lg:flex-row w-full lg:w-[80%]">
 
     <!-- Image Product and Info Toko -->
-    <div class="mr-12">
+    <div class="mb-4 lg:mb-0 lg:mr-12">
 
       <!-- Images Product -->
       <div class="mb-8">
-        <div class="w-full h-[400px] bg-shopperly-blue rounded-md mb-2">
-          <img src="" alt="">
+        <div class="w-[300px] h-[400px] bg-shopperly-blue rounded-md mb-2">
+          <img :src="selectedImage" class="object-cover h-full w-full object-center" alt="">
         </div>
         <div class="flex items-center gap-2">
-          <div class="w-20 h-20 bg-gray-300 rounded"></div>
-          <div class="w-20 h-20 bg-gray-300 rounded"></div>
-          <div class="w-20 h-20 bg-gray-300 rounded"></div>
-          <div class="w-20 h-20 bg-gray-300 rounded"></div>
+          <div 
+            v-for="(image, index) of images" 
+            :key="index" 
+            @click="setSelectedImage(image)"
+            class="w-20 h-20 bg-black rounded overflow-hidden cursor-pointer filter hover:brightness-105" 
+            :class="{
+              'border-2 border-shopperly-green-400' : selectedImage === image,
+            }"
+          >
+            <img :src="image" :class="selectedImage !== image ? 'opacity-80' : ''" alt="product image ">
+          </div>
         </div>
       </div>
 
       <!-- Info Toko -->
-      <div class="flex items-center border-2 border-shopperly-blue px-5 py-2 rounded-sm">
-        <div class="rounded-full w-16 h-16 bg-shopperly-blue ">
-          <img src="" alt="">
+      <div class="hidden lg:block">
+        <div class="flex items-center border border-shopperly-green-400 px-5 py-2 rounded-sm">
+          <div class="rounded-full w-16 h-16 bg-shopperly-green-400">
+            <img src="" alt="">
+          </div>
+          <div class="ml-3">
+            <h2 class="font-bold ">NAMA TOKO DISINI Terbaik</h2>
+            <p>Online <span class="font-medium">1 jam yang lalu</span> </p>
+            <p class="flex items-center">
+              <icon-star class="text-yellow-300"/>
+              <span class="mr-1 font-semibold">4.8</span>
+              rata rata ulasan
+            </p>
+          </div>
         </div>
-        <div class="ml-3">
-          <h2 class="font-bold ">NAMA TOKO DISINI Terbaik</h2>
-          <p>Online <span class="font-medium">1 jam yang lalu</span> </p>
-          <p class="flex items-center">
-            <icon-star class="text-yellow-300"/>
-            <span class="mr-1 font-semibold">4.8</span>
-            rata rata ulasan
-          </p>
+        <div class="py-2 border border-shopperly-green-400 rounded-b-xl mt-2 grid place-items-center font-bold text-xl">
+          FOLLOW
         </div>
-      </div>
-      <div class="py-2 border-2 border-shopperly-blue rounded-b-xl mt-2 grid place-items-center font-bold text-xl">
-        FOLLOW
       </div>
     </div>
 
     <!-- Product Description -->
     <div class="">
       <h1 class="text-lg font-bold mb-2">
-        Title Product disini dengan ukuran text 18px  dan tanpa ada titik titik tapi jika terlalu kepanjangan maka akan terus turun terus dan rata kiri
+        Jaket Sweater Hoodie Zipper Polos Pria
       </h1>
       <div class="flex items-center">
         <p>Terjual <span>10</span></p>
@@ -90,9 +99,35 @@
 
 <script>
 import { IconStar } from "@/components/icons";
+import { reactive, ref } from 'vue';
+
+import jaket_red from '@/assets/images/jaket_red.jpg'
+import jaket_green from '@/assets/images/jaket_green.jpg'
+import jaket_navy from '@/assets/images/jaket_navy.jpg'
+import jaket_black from '@/assets/images/jaket_black.jpg'
 export default {
   components: {
     IconStar
+  },
+  setup(){
+    const images = reactive([
+      jaket_red,
+      jaket_green,
+      jaket_navy,
+      jaket_black,
+    ])
+
+    const selectedImage = ref(jaket_red)
+
+    const setSelectedImage = (image) => {
+      selectedImage.value = image
+    }
+
+    return {
+      selectedImage,
+      setSelectedImage,
+      images
+    }
   }
 }
 </script>
