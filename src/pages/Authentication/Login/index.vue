@@ -1,11 +1,11 @@
 <template>
   <div class="relative h-screen w-full">
-    <Back to="/" class="absolute top-2 left-2 z-50" />
-    <div class="absolute right-0 text-left w-full md:w-[25rem] z-10 px-2 md:px-0 md:mx-16">
+    <Back to="/" class="absolute top-0 left-0 z-50" />
+    <div class="absolute top-1/2 transform -translate-y-1/2 right-0 text-left w-full md:w-[25rem] z-10 px-2 md:px-0 md:mx-16">
 
       <!-- Title -->
-      <div class="text-center mb-1">
-        <h1 class="brand text-6xl md:text-7xl mt-5 text-gradient bg-gradient-to-r from-shopperly-blue to-shopperly-green-300 inline-block">
+      <div class="text-center mb-3">
+        <h1 class="brand text-6xl md:text-7xl text-gradient bg-gradient-to-r from-shopperly-blue to-shopperly-green-300 inline-block">
           Shopperly
         </h1>
         <p class="text-sm md:text-lg text-gray-700 font-medium leading-4 ">
@@ -33,8 +33,16 @@
     </div>
 
     <!-- Background -->
-    <img src="@/assets/images/bg-login-decoration.svg" class="absolute bottom-0 right-0 h-[85%] pl-10" alt="background login decoration">
-    <img src="@/assets/images/bg-login.svg" class="absolute top-1/2 transform -translate-y-1/2 left-0 h-[50%] pl-10" alt="background login">
+    <img 
+      src="@/assets/images/bg-login-decoration.svg" 
+      class="absolute bottom-0 right-0 h-[85%] pl-10" 
+      alt="background login decoration"
+    >
+    <img 
+      src="@/assets/images/bg-login.svg" 
+      class="absolute top-1/2 transform -translate-y-1/2 left-0 h-[50%] pl-10"
+      alt="background login"
+    >
   </div>
 </template>
 

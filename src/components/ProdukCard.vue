@@ -62,9 +62,6 @@ export default {
       default: 0
     }
   },
-  mounted() {
-    console.log(this.image)
-  },
   setup(props){
     const router = useRouter()
 

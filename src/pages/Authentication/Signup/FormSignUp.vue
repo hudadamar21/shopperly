@@ -21,7 +21,6 @@
           v-model="password"
           placeholder="*********"
         />
-        <password-meter v-model="password" :strength-meter-only="true" />
         <div
           class="show-password"
           @click="show('password')"
@@ -29,13 +28,14 @@
           <icon-show-password :show="showed.password" />
         </div>
       </div>
+      <PasswordMeter :password="password" />
     </div>
     <div class="mb-2">
-      <label for="password" class="form-label">Confirm Password</label>
+      <label for="confirm_password" class="form-label">Confirm Password</label>
       <div class="relative">
         <input
           class="form-input"
-          id="password"
+          id="confirm_password"
           :type="showed.confirmPassword ? 'text' : 'password'"
           v-model="confirmPassword"
           placeholder="*********"
@@ -47,6 +47,7 @@
           <icon-show-password :show="showed.confirmPassword" />
         </div>
       </div>
+      
     </div>
     <div class="py-4 flex items-center gap-3">
       <div class="flex-grow h-px bg-gray-400"></div>
@@ -71,9 +72,9 @@
     </button>
     <p class="text-[8.5px] mt-1">
       Dengan mendaftar, saya menyetujui
-      <span class="text-blue-400 hover:text-blue-500 cursor-pointer ">Syarat dan Ketentuan </span>
+      <span class="text-blue-400 hover:text-blue-500 cursor-pointer">Syarat dan Ketentuan </span>
       serta
-      <span class="text-blue-400 hover:text-blue-500 cursor-pointer "> Kebijakan Privasi Shopperly</span> 
+      <span class="text-blue-400 hover:text-blue-500 cursor-pointer"> Kebijakan Privasi Shopperly</span> 
     </p>
   </form>
 </template>
@@ -81,12 +82,14 @@
 <script>
 import { reactive, ref } from "vue";
 import { IconFacebook, IconGoogle, IconShowPassword } from "@/components/icons";
+import PasswordMeter from 'vue-simple-password-meter';
 
 export default {
   components: {
     IconFacebook,
     IconGoogle,
-    IconShowPassword
+    IconShowPassword,
+    PasswordMeter
   },
   emits: ["formsubmit"],
   setup(props, { emit }) {
@@ -140,5 +143,35 @@ export default {
 }
 .show-password {
   @apply absolute top-1/2 transform -translate-y-1/2 right-2 text-gray-700 cursor-pointer
+}
+.po-password-strength-bar {
+  transition: all 0.2s linear;
+  height: 6px;
+  margin-top: 8px;
+}
+
+.po-password-strength-bar.risky {
+  width: 10%;
+  background-color: #e22834;
+}
+
+.po-password-strength-bar.guessable {
+  width: 20%;
+  background-color: #ff8c3a;
+}
+
+.po-password-strength-bar.weak {
+  width: 40%;
+  background-color: #ffd035;
+}
+
+.po-password-strength-bar.safe {
+  width: 70%;
+  background-color: #8ae656;
+}
+
+.po-password-strength-bar.secure {
+  width: 100%;
+  background-color: #19ce4f;
 }
 </style>

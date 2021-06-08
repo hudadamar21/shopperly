@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen w-full">
-    <Back to="/" class="absolute top-2 left-2 z-50"/>
+    <Back to="/" class="absolute top-0 left-0 z-50"/>
 
     <!-- Title -->
     <div class="text-center">

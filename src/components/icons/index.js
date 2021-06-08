@@ -9,6 +9,10 @@ import IconFacebook from "./IconFacebook.vue";
 import IconBack from "./IconBack.vue";
 import IconShowPassword from "./IconShowPassword.vue";
 import IconStar from "./IconStar.vue";
+import IconArrowDown from "./IconArrowDown.vue";
+import IconChat from "./IconChat.vue";
+import IconLove from "./IconLove.vue";
+import IconShare from "./IconShare.vue";
 
 
 export {
@@ -22,5 +26,9 @@ export {
   IconFacebook,
   IconBack,
   IconShowPassword,
-  IconStar
+  IconStar,
+  IconArrowDown,
+  IconChat,
+  IconLove,
+  IconShare
 }

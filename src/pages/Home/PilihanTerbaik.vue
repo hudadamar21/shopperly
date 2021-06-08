@@ -23,6 +23,7 @@
         <template #body="{ slideData: { title, price, rating, sold }}"> 
           <ProdukCard
             :title="title"
+            image=""
             :price="price"
             :rating="rating"
             :sold="sold"
