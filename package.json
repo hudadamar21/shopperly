@@ -15,10 +15,8 @@
     "@tailwindcss/line-clamp": "^0.2.0",
     "swiper": "^6.6.2",
     "vue": "^3.0.5",
-    "vue-password-strength-meter": "^1.7.2",
     "vue-router": "^4.0.8",
-    "vue-simple-password-meter": "^1.0.3",
-    "zxcvbn": "^4.4.2"
+    "vue-simple-password-meter": "^1.0.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.2",
