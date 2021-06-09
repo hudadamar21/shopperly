@@ -31,24 +31,24 @@
     </div>
     <div class="py-4 flex items-center gap-3">
       <div class="flex-grow h-px bg-gray-400"></div>
-      <span class="text-gray-500">or sign up</span>
+      <span class="text-gray-500">or login with</span>
       <div class="flex-grow h-px bg-gray-400"></div>
     </div>
     <div class="flex items-center gap-5">
       <button class="form-button flex-grow">
         <icon-facebook />
-        <span class="ml-2">Facebook</span>
+        <span class="ml-2 text-center">Facebook</span>
       </button>
       <button class="form-button flex-grow">
         <icon-google />
-        <span class="ml-2">Google</span>
+        <span class="ml-2 text-center">Google</span>
       </button>
     </div>
     <button
       type="submit"
       class="form-button w-full mt-3 justify-center font-semibold"
     >
-      Sign Up
+      Login
     </button>
   </form>
 </template>
