@@ -2,57 +2,35 @@
     <div class="border shadow-md rounded-md">
 
       <!-- Pilih Varian -->
-      <div class="border-b">
-        <header class="flex items-center justify-between p-3">
-          <h2 class="text-lg font-medium">Pilih Varian</h2>
-          <div 
-            class="cursor-pointer hover:opacity-70" 
-            @click="toggleDetailOrder('pilihVarianOpen')"
-          >
-            <icon-arrow-down/>
-          </div>
-        </header>
-        <main 
-          class="overflow-hidden transition-all duration-500"
-          :class="detailOrder.pilihVarianOpen ? 'max-h-48' : 'max-h-0'"  
-        >
+      <Expandable 
+        title="Pilih Varian" 
+        :expand="pilihVarianOpen"
+      >
         <div class="p-3 grid grid-cols-4 gap-3">
           <div v-for="i of 8" :key="i" class="bg-gray-300 w-full h-14 "></div>
         </div>
-        </main>
-      </div>
+      </Expandable>
 
       <!-- Jumlah Barang -->
-      <div>
-        <header class="flex items-center justify-between p-3">
-          <h2 class="text-lg font-medium">Jumlah Barang</h2>
-          <div 
-            class="cursor-pointer hover:opacity-70" 
-            @click="toggleDetailOrder('jumlahBarangOpen')"
-          > 
-            <icon-arrow-down/>
+      <Expandable 
+        title="Jumlah Barang" 
+        :expand="jumlahBarangOpen"
+      >
+        <div class="flex items-center justify-between gap-3 pt-5 mx-4">
+          <div class="px-2 py-1 w-[60%] flex items-center justify-between">
+            <button class="button-counter" @click="decrementJumlahBarang()">-</button>
+            <input ref="elementJumlahBarang" type="text" class="border-b-2 w-1/2 focus:outline-none focus:border-shopperly-green-400 text-center transition" @change="validateJumlahBarang" v-model="jumlahBarang">
+            <button class="button-counter" @click="IncrementJumlahBarang()">+</button>
           </div>
-        </header>
-        <main 
-          class="px-3 border-b overflow-hidden transition-all duration-500"
-          :class="detailOrder.jumlahBarangOpen ? 'max-h-48' : 'max-h-0'"
-        >
-          <div class="flex items-center justify-between gap-3 pt-3">
-            <div class="px-2 py-1 w-[60%] flex items-center justify-between">
-              <button class="button-counter" @click="setJumlahBarang('-')">-</button>
-              <input ref="elementJumlahBarang" type="text" class="border-b-2 w-1/2 focus:outline-none focus:border-shopperly-green-400 text-center transition" @change="validateJumlahBarang" v-model="jumlahBarang">
-              <button class="button-counter" @click="setJumlahBarang('+')">+</button>
-            </div>
-            <p class="w-[40%] border-2 px-3 py-1 rounded font-semibold text-center">
-              Stock: {{ stockBarang }}
-            </p>
-          </div>
-          <div class="flex items-center justify-between border-2 px-3 p-2 my-4 rounded">
-            <p>Harga Barang</p>
-            <p class="text-xl font-bold">Rp 10.000.000</p>
-          </div>
-        </main>
-      </div>
+          <p class="w-[40%] border-2 px-3 py-1 rounded font-semibold text-center">
+            Stock: {{ stockBarang }}
+          </p>
+        </div>
+        <div class="flex items-center justify-between border-2 px-3 p-2 my-5 rounded mx-4">
+          <p>Harga Barang</p>
+          <p class="text-xl font-bold">Rp 10.000.000</p>
+        </div>
+      </Expandable>
 
       <!-- Button Confirm -->
       <div class="p-3 pb-0">
@@ -82,55 +60,64 @@
 
 <script>
 import { IconArrowDown, IconChat, IconLove, IconShare} from '@/components/icons'
-import { reactive, ref } from "vue";
+import { reactive, ref, toRefs } from "vue";
+import Expandable from "@/components/Expandable.vue";
+
 export default {
-  components: { IconArrowDown, IconChat, IconLove, IconShare },
+  components: { 
+    IconArrowDown, 
+    IconChat, 
+    IconLove, 
+    IconShare, 
+    Expandable
+  },
   setup(){
     const detailOrder = reactive({
       pilihVarianOpen: true,
       jumlahBarangOpen: true,
     })
 
-    const toggleDetailOrder = (key) => {
-      detailOrder[key] = !detailOrder[key]
-    }
-
     const jumlahBarang = ref(1)
     const stockBarang = ref(10)
     const elementJumlahBarang = ref(null)
 
     const validateJumlahBarang = () => {
+      // Jika jumlah barang lebih besar dari stock barang
       if(jumlahBarang.value > stockBarang.value) {
+
+        // maka balikan nilainya sesuai stock yang tersedia
         jumlahBarang.value = stockBarang.value
+
+        // dan berikan respon dengan mengubah border bawah menjadi merah
         elementJumlahBarang.value.classList.add('border-red-500','focus:border-red-500')
+
+        // setalah 1 detik border akan kembali seperti semula
         setTimeout(() => {
           elementJumlahBarang.value.classList.remove('border-red-500','focus:border-red-500')
         }, 1000);
       }
     }
 
-    const setJumlahBarang = (mode) => {
-      if(mode === '-'){
-        if(jumlahBarang.value > 1){
-          jumlahBarang.value--
-        }
-      } else if(mode === '+'){
-        if(jumlahBarang.value < stockBarang.value){
-          jumlahBarang.value++
-        }
+    const IncrementJumlahBarang = () => {
+      if(jumlahBarang.value > 1){
+        jumlahBarang.value--
       }
     }
 
-    
+    const decrementJumlahBarang = () => {
+      if(jumlahBarang.value < stockBarang.value) {
+        jumlahBarang.value++
+      }
+    }
 
     return {
-      detailOrder,
-      toggleDetailOrder,
+      ...toRefs(detailOrder),
       jumlahBarang,
       stockBarang,
       elementJumlahBarang,
       validateJumlahBarang,
-      setJumlahBarang,
+      IncrementJumlahBarang,
+      decrementJumlahBarang
     }
   }
 }

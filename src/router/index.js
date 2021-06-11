@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Home from "@/pages/Home/index.vue";
 import Product from "@/pages/Product/index.vue";
+import User from "@/pages/User/index.vue";
 
 // Auth
 import Signup from "@/pages/Authentication/Signup/index.vue";
@@ -19,6 +20,11 @@ const routes = [
     name: 'product',
     component: Product
   },
+  {
+    path: '/user/profile/:id',
+    name: 'user_profile',
+    component: User
+  },
   { 
     path: '/signup',
     name: 'signup',
@@ -31,7 +37,7 @@ const routes = [
   },
   { 
     path: '/forget-password',
-    name: 'forget-password',
+    name: 'forget_password',
     component: ForgetPassword 
   },
 ]

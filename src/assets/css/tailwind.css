@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+@layer base {
+  button:focus,input:focus,select:focus {
+    outline: none;
+  }
+}
+
 @layer utilities {
   .text-gradient {
     background-clip: text;

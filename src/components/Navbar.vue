@@ -20,12 +20,9 @@
     <!-- Menus -->
     <div class="flex items-center pl-5 h-full">
       <ul class="menu">
-        <li class="" @click="showKeranjang = !showKeranjang">
-
+        <li @click="showKeranjang = !showKeranjang">
           <div class="relative">
-            <!-- keranjang count -->
-            <div class="absolute -top-2 -right-2 h-3 md:h-4 w-3 md:w-4 rounded-full bg-red-500 text-[8px] md:text-[10px] grid place-items-center text-white">3</div>
-
+            <div class="keranjang-count">3</div>
             <icon-keranjang/>
           </div>
         </li>
@@ -41,11 +38,16 @@
         <li>
           <icon-toko/>
         </li>
-        <li class="!w-auto !rounded-md" :class="{'px-1 md:px-2' : !isAuthenticate}">
-          <router-link v-if="isAuthenticate" to="/login">
+        <li>
+          <router-link :to="{ name: 'user_profile', params: { id: '1' }}">
             <icon-user/>
           </router-link>
-          <router-link v-else to="/login" class="text-base md:text-lg font-semibold flex items-center">
+        </li>
+        <li class="!w-auto !rounded-md flex items-center" :class="{'px-1 md:px-2' : !isAuthenticate}">
+          <!-- <router-link v-if="isAuthenticate" to="/login">
+            <icon-user/>
+          </router-link> -->
+          <router-link to="/login" class="text-base md:text-lg font-semibold flex items-center">
             login
           </router-link>
         </li>
@@ -80,6 +82,7 @@ export default {
   setup(){
     const isAuthenticate = ref(false)
     const showKeranjang = ref(false)
+
     return {
       isAuthenticate,
       showKeranjang
@@ -94,5 +97,8 @@ ul.menu {
 }
 ul.menu li {
   @apply w-6 md:w-10 h-6 md:h-10 rounded-full grid place-items-center text-shopperly-green-400 hover:bg-shopperly-green-100 cursor-pointer transition duration-200
+}
+.keranjang-count {
+  @apply absolute -top-2 -right-2 h-3 md:h-4 w-3 md:w-4 rounded-full bg-red-500 text-[8px] md:text-[10px] grid place-items-center text-white
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute top-full mt-1 md:right-40 p-3 mx-1 bg-white shadow-md border rounded min-h-32 min-w-1/3 z-10">
+  <div ref="elKeranjang" class="absolute top-full mt-1 md:right-40 p-3 mx-1 bg-white shadow-md border rounded min-h-32 min-w-1/3 z-10">
     <div class="text-gray-700">
 
       <!-- title and see more -->

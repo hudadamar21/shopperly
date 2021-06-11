@@ -6,6 +6,7 @@
       <div class="p-2 w-1/2 sm:w-1/3 md:w-1/4" v-for="i of 4" :key="i">
         <ProdukCard
           title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci ea recusandae atque! Beatae assumenda adipisci."
+          image=""
           :price="1000000"
           :rating="4.5"
           :sold="1000"
