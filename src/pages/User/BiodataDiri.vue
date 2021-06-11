@@ -9,15 +9,15 @@
       <label class="input-label">Tanggal Lahir</label>
       <div class="flex-grow flex items-center gap-3">
         <select class="border px-3 py-2">
-          <option selected disabled>tanggal</option>
+          <option selected disabled hidden>tanggal</option>
           <option v-for="tanggal of range(1,31)" :key="tanggal" :value="tanggal">{{ tanggal }}</option>
         </select>
         <select class="border px-3 py-2 flex-grow">
-          <option selected disabled>bulan</option>
+          <option selected disabled hidden>bulan</option>
           <option v-for="bulan of bulans" :key="bulan" :value="bulan">{{ bulan }}</option>
         </select>
         <select class="border px-3 py-2">
-          <option selected disabled>tahun</option>
+          <option selected disabled hidden>tahun</option>
           <option v-for="tahun of range(1980, 2021).reverse()" :key="tahun" :value="tahun">{{ tahun }}</option>
         </select>
       </div>

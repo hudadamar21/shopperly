@@ -1,7 +1,7 @@
 <template>
   <div class="p-8 border flex flex-col items-center flex-grow">
     <div class="w-48 h-48 rounded-full bg-gray-300 shadow-md overflow-hidden">
-      <img src="@/assets/images/default_profile_image.jpg" class="object-cover object-center w-full h-full" alt="">
+      <img :src="default_image" class="object-cover object-center w-full h-full" alt="">
     </div>
     <div>
       <button class="w-full py-2 border-2 text-xl mt-7">
@@ -13,8 +13,13 @@
 </template>
 
 <script>
+import default_image from "@/assets/images/default_profile_image.jpg";
 export default {
-
+  data(){
+    return {
+      default_image
+    }
+  }
 }
 </script>
 

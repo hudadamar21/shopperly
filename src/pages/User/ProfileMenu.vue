@@ -2,7 +2,7 @@
   <div class="border lg:rounded-r-3xl h-full">
     <div class="flex items-center py-3 border-b pl-5">
       <img 
-        src="@/assets/images/default_profile_image.jpg" 
+        :src="default_image" 
         class="w-10 lg:w-16 h-10 lg:h-16 rounded-full object-center object-cover bg-gray-300 overflow-hidden" 
         alt="profile image"
       >
@@ -51,6 +51,7 @@
 <script>
 import { ref } from 'vue';
 
+import defaultImage from "@/assets/images/default_profile_image.jpg";
 import Expandable from "@/components/Expandable.vue";
 
 export default {
@@ -59,9 +60,11 @@ export default {
   },
   setup(){
     const expandMenu = ref(true)
-
+    const default_image = ref(defaultImage)
+    
     return {
-      expandMenu
+      expandMenu,
+      default_image
     }
   }
 }

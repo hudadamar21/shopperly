@@ -20,7 +20,7 @@
     <!-- Menus -->
     <div class="flex items-center pl-5 h-full">
       <ul class="menu">
-        <li @click="showKeranjang = !showKeranjang">
+        <li @click="toggleShowKeranjang">
           <div class="relative">
             <div class="keranjang-count">3</div>
             <icon-keranjang/>
@@ -83,22 +83,27 @@ export default {
     const isAuthenticate = ref(false)
     const showKeranjang = ref(false)
 
+    const toggleShowKeranjang = () => {
+      showKeranjang.value = !showKeranjang.value
+    }
+
     return {
       isAuthenticate,
-      showKeranjang
+      showKeranjang,
+      toggleShowKeranjang
     }
   }
 }
 </script>
 
 <style lang="postcss">
-ul.menu {
-  @apply flex items-center gap-3
-}
-ul.menu li {
-  @apply w-6 md:w-10 h-6 md:h-10 rounded-full grid place-items-center text-shopperly-green-400 hover:bg-shopperly-green-100 cursor-pointer transition duration-200
-}
-.keranjang-count {
-  @apply absolute -top-2 -right-2 h-3 md:h-4 w-3 md:w-4 rounded-full bg-red-500 text-[8px] md:text-[10px] grid place-items-center text-white
-}
+  ul.menu {
+    @apply flex items-center gap-3
+  }
+  ul.menu li {
+    @apply w-6 md:w-10 h-6 md:h-10 rounded-full grid place-items-center text-shopperly-green-400 hover:bg-shopperly-green-100 cursor-pointer transition duration-200
+  }
+  .keranjang-count {
+    @apply absolute -top-2 -right-2 h-3 md:h-4 w-3 md:w-4 rounded-full bg-red-500 text-[8px] md:text-[10px] grid place-items-center text-white
+  }
 </style>
