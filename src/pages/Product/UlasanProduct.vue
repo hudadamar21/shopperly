@@ -18,13 +18,7 @@
             </div>
           </div>
           <div class="py-5 lg:pl-8 lg:w-[85%]">
-            <span class="flex iteme-center text-yellow-300">
-              <icon-star/>
-              <icon-star/>
-              <icon-star/>
-              <icon-star/>
-              <icon-star class="text-gray-300"/>
-            </span>
+            <Rating :score="ulasan.rating" :maxScore="5"/>
             <p class="mb-5">
               {{ ulasan.ulasan }}
             </p>
@@ -51,17 +45,19 @@
 </template>
 
 <script>
-import { IconStar } from "@/components/icons";
 import { reactive } from 'vue';
+import Rating from "@/components/Rating.vue";
+
 export default {
   components: {
-    IconStar
+    Rating
   },
   setup(){
     const ulasanList = reactive([
       {
         namaPembeli: 'Nama Pembeli',
         waktuBerlalu: 'seminggu yang lalu',
+        rating: 4,
         ulasan: 'Barang nya keren banget dan saya sangat suka dengan kualitas barang dari Toko ini!',
         tanggapanToko: {
           namaToko: 'Nama Toko',
@@ -72,6 +68,7 @@ export default {
       {
         namaPembeli: 'Nama Pembeli',
         waktuBerlalu: 'seminggu yang lalu',
+        rating: 5,
         ulasan: 'Barang nya keren banget dan saya sangat suka dengan kualitas barang dari Toko ini!!',
         tanggapanToko: {
           namaToko: 'Nama Toko',
@@ -82,6 +79,7 @@ export default {
       {
         namaPembeli: 'Nama Pembeli',
         waktuBerlalu: 'seminggu yang lalu',
+        rating: 2,
         ulasan: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quo officia quasi cum mollitia excepturi vitae voluptate at ex laudantium sapiente fugiat iusto dolorem est eveniet. Consequuntur, inventore quisquam amet vitae cupiditate recusandae ipsa fugiat. Voluptatibus, esse explicabo dolorem, officia nulla, modi repudiandae corporis sed sit dignissimos facilis inventore nemo quibusdam aliquam reprehenderit beatae eius laborum? Quia veniam quod, ipsum nulla sed non delectus aut voluptatem eaque natus, impedit vel et? Accusamus tempore vel pariatur doloribus laudantium. Architecto, soluta quo odio error sint consequatur quod tempore, hic asperiores, eius numquam optio voluptatibus. Asperiores illo fugit quas perspiciatis aspernatur odit dolores eligendi cupiditate laborum, quo facere incidunt numquam dicta itaque earum eos laboriosam perferendis quae qui temporibus tempora cumque minima! Blanditiis laborum esse iusto, nostrum quidem quod, totam illum alias eos quos reiciendis vel aut error sint provident necessitatibus, voluptatum nisi qui repellat quibusdam. Odio deleniti consequatur nobis, neque optio natus. Deserunt, odio sint consequatur nihil voluptas, molestiae ab enim repellendus omnis voluptatibus nam fugit iure fugiat. Placeat officiis praesentium modi nam ducimus at quod cupiditate perspiciatis! Facilis eum exercitationem esse eius quidem doloribus voluptate nemo animi blanditiis dolor doloremque consequuntur, delectus nostrum nobis odit voluptatem consectetur itaque est autem reiciendis!',
         tanggapanToko: {
           namaToko: 'Nama Toko',

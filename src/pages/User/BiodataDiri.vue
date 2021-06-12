@@ -42,7 +42,7 @@
         <input id="email" type="text" class="flex-grow border px-3 py-2">
       </div>
       <div class="input-wrapper">
-        <label for="nomer_hp" class="input-label">Nomor HP</label>
+        <label for="nomer_hp" class="input-label mb-4">Nomor HP</label>
         <div class="flex-grow">
           <input id="nomer_hp" type="text" class="w-full border px-3 py-2">
           <p class="text-xs mt-1">Kami akan mengirimkan kode verifikasi melalui SMS</p>
@@ -89,7 +89,7 @@ export default {
 
 <style>
   .input-wrapper {
-    @apply flex flex-col lg:flex-row items-stretch
+    @apply flex flex-col lg:flex-row items-stretch md:items-center
   }
   .input-label {
     @apply w-full lg:w-1/4 mb-1 lg:mb-0

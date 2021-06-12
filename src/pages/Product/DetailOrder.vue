@@ -99,14 +99,14 @@ export default {
     }
 
     const IncrementJumlahBarang = () => {
-      if(jumlahBarang.value > 1){
-        jumlahBarang.value--
+      if(jumlahBarang.value < stockBarang.value) {
+        jumlahBarang.value++
       }
     }
 
     const decrementJumlahBarang = () => {
-      if(jumlahBarang.value < stockBarang.value) {
-        jumlahBarang.value++
+      if(jumlahBarang.value > 1){
+        jumlahBarang.value--
       }
     }
 
