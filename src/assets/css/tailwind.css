@@ -4,8 +4,8 @@
 
 
 @layer base {
-  button:focus,input:focus,select:focus {
-    outline: none;
+  button,input,select, textarea {
+    @apply transition focus:outline-none focus:ring ring-shopperly-green-400 ring-opacity-30;
   }
 }
 

@@ -7,7 +7,7 @@
       </div>
     </header>
     <main 
-      class="overflow-hidden transition-all duration-500"
+      class="overflow-hidden transition-all duration-500 px-3"
       :class="expand ? maxheight : 'max-h-0'"  
     >
       <slot/>

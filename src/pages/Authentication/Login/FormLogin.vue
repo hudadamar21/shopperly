@@ -97,7 +97,7 @@ export default {
   @apply font-semibold block mb-1;
 }
 .form-input {
-  @apply px-3 py-1 rounded-md border-2 border-shopperly-blue focus:border-shopperly-green-400 w-full focus:outline-none transition;
+  @apply px-3 py-1 rounded-md border-2 border-shopperly-blue focus:border-shopperly-green-400 w-full focus:!ring-0;
 }
 .form-button {
   @apply flex items-center px-3 py-1 border-2 border-shopperly-blue hover:border-shopperly-green-400 rounded-md focus:outline-none;

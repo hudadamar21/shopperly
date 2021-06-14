@@ -1,5 +1,5 @@
 <template>
-  <div class="py-8 lg:py-12 w-full flex flex-col gap-5 font-medium">
+  <div class="py-8 w-full flex flex-col gap-5 font-medium">
     <h1 class="text-xl font-bold">Profile Saya</h1>
     <div class="input-wrapper">
       <label for="nama" class="input-label">Nama</label>

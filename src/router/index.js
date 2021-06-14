@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Home from "@/pages/Home/index.vue";
 import Product from "@/pages/Product/index.vue";
+import Keranjang from "@/pages/Keranjang/index.vue";
 import User from "@/pages/User/index.vue";
 
 // Auth
@@ -19,6 +20,11 @@ const routes = [
     path: '/product/:name',
     name: 'product',
     component: Product
+  },
+  {
+    path: '/keranjang',
+    name: 'keranjang',
+    component: Keranjang
   },
   {
     path: '/user/profile/:id',

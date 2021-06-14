@@ -5,7 +5,7 @@
       <!-- title and see more -->
       <div class="border-b pb-1 flex items-end justify-between font-medium">
         <h3>Keranjang ({{keranjangProductList.length}})</h3>
-        <a href="#" class="text-xs text-shopperly-green-400 hover:text-shopperly-blue">selengkapnya</a>
+        <router-link :to="{ name: 'keranjang' }" class="text-xs text-shopperly-green-400 hover:text-shopperly-blue">selengkapnya</router-link>
       </div>
 
       <!-- product list on cart -->
