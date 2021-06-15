@@ -1,11 +1,11 @@
 <template>
   <!-- Kategori Product -->
   <section class="min-h-[400px] flex flex-col items-center gap-3 mt-10">
-    <div class="flex flex-col lg:flex-row gap-3">
-      <div class="bg-shopperly-green-100">
+    <div class="flex flex-col lg:flex-row gap-3 w-full">
+      <div class="bg-shopperly-green-100 flex-grow">
         <img src="@/assets/images/events.svg" class="image-thumbnail" alt="events">
       </div>
-      <div class="flex gap-3">
+      <div class="flex gap-3 w-full lg:w-1/2">
         <div class="bg-shopperly-green-100 w-1/2">
           <img src="@/assets/images/coming_soon.svg" class="image-thumbnail" alt="coming soon">
         </div>
