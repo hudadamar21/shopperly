@@ -1,14 +1,14 @@
 <template>
   <!-- Kategori Product -->
   <section class="h-[400px] grid grid-cols-5 grid-rows-3 gap-3 mt-10">
-    <div class="col-span-3 row-span-2 bg-shopperly-green-100 grid place-items-center">
-      Event or Promo Product
+    <div class="col-span-3 row-span-2 bg-shopperly-green-100">
+      <img src="@/assets/images/events.png" class="image-thumbnail" alt="events">
     </div>
-    <div class="col-span-1 row-span-2 bg-shopperly-green-100 grid place-items-center">
-      Top Product
+    <div class="col-span-1 row-span-2 bg-shopperly-green-100">
+      <img src="@/assets/images/coming_soon.png" class="image-thumbnail" alt="coming soon">
     </div>
-    <div class="col-span-1 row-span-2 bg-shopperly-green-100 grid place-items-center">
-      Related Product
+    <div class="col-span-1 row-span-2 bg-shopperly-green-100">
+      <img src="@/assets/images/coming_soon.png" class="image-thumbnail" alt="coming soon">
     </div>
     <div class="category relative overflow-hidden col-span-5 row-span-1 rounded-md bg-shopperly-green-100 grid place-items-center">
       <SwiperSlider 
@@ -21,7 +21,6 @@
         <template #body="{ slideData: { icon, name }}"> 
           <div class="border-2 border-shopperly-green-400 rounded-2xl flex items-center px-2.5 py-1.5 cursor-pointer">
           <div class="bg-shopperly-green-400 rounded-full p-3">
-            <!-- svg -->
             {{ icon }}
           </div>
           <h3 class="pl-2 text-2xl">{{ name }}</h3>

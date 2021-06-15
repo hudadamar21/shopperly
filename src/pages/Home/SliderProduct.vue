@@ -11,7 +11,7 @@
     :data="sliderData"
   >
     <template #body="{ slideData }">
-      {{ slideData.text }} 
+      <img :src="slideData.image" class="image-thumbnail">
     </template>
   </SwiperSlider>
 </template>
@@ -20,6 +20,10 @@
 import { reactive } from "vue";
 
 import SwiperSlider from "@/components/SwiperSlider.vue";
+
+import image_slider1 from "@/assets/images/image_slider1.png";
+import image_slider2 from "@/assets/images/image_slider2.png";
+
 export default {
   components: {
     SwiperSlider
@@ -27,13 +31,10 @@ export default {
   setup(){
     const sliderData = reactive([
         {
-          text: 'hello'
+          image: image_slider1
         },
         {
-          text: 'world'
-        },
-        {
-          text: 'back'
+          image: image_slider2
         },
       ])
     return {
@@ -42,7 +43,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

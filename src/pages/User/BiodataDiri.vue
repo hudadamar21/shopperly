@@ -26,11 +26,11 @@
       <label class="input-label">Jenis Kelamin</label>
       <div class="flex items-center">
         <div class="flex items-center mr-5">
-          <input id="laki-laki" type="radio" name="jenis_kelamin" value="laki-laki">
+          <input id="laki-laki" type="radio" class="!ring-0" name="jenis_kelamin" value="laki-laki">
           <label for="laki-laki" class="ml-2 cursor-pointer">Laki-laki</label>
         </div>
         <div class="flex items-center">
-          <input id="perempuan" type="radio" name="jenis_kelamin" value="perempuan">
+          <input id="perempuan" type="radio" class="!ring-0" name="jenis_kelamin" value="perempuan">
           <label for="perempuan" class="ml-2 cursor-pointer">Perempuan</label>
         </div>
       </div>
@@ -87,7 +87,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="postcss">
   .input-wrapper {
     @apply flex flex-col lg:flex-row items-stretch md:items-center
   }

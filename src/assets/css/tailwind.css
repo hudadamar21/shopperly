@@ -15,3 +15,9 @@
     -webkit-text-fill-color: transparent;
   }
 }
+
+@layer components {
+  .image-thumbnail {
+    @apply w-full h-full object-cover object-center
+  }
+}

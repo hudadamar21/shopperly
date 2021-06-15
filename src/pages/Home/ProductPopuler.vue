@@ -38,7 +38,10 @@ import SectionTitle from "@/components/SectionTitle.vue";
 import ProdukCard from "@/components/ProdukCard.vue";
 import SwiperSlider from "@/components/SwiperSlider.vue";
 
-import jaket_red from '@/assets/images/jaket_red.jpg';
+import jaket_black from "@/assets/images/jaket_black.jpg";
+import jaket_green from "@/assets/images/jaket_green.jpg";
+import jaket_navy from "@/assets/images/jaket_navy.jpg";
+import jaket_red from "@/assets/images/jaket_red.jpg";
 
 import { reactive } from 'vue';
 export default {
@@ -60,7 +63,7 @@ export default {
         {
           id: 2,
           title: 'amet consectetur adipisicing elit. Adipisci ea recusandae atque! Beatae assumenda adipisci.',
-          image: '',
+          image: jaket_black,
           price: 2500000,
           rating: 4.5,
           sold: 1200000
@@ -68,7 +71,7 @@ export default {
         {
           id: 3,
           title: 'Adipisci ea recusandae atque! Beatae assumenda adipisci. Lorem ipsum dolor sit, amet consectetur adipisicing elit. ',
-          image: '',
+          image: jaket_navy,
           price: 2000000,
           rating: 4.0,
           sold: 1400
@@ -76,7 +79,7 @@ export default {
         {
           id: 4,
           title: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci ea recusandae atque! Beatae assumenda adipisci.',
-          image: '',
+          image: jaket_green,
           price: 5000000,
           rating: 4.8,
           sold: 100
@@ -89,7 +92,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

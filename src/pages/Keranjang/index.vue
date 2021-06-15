@@ -11,7 +11,7 @@
 
 <script>
 import MainLayout from '@/layouts/Main.vue'
-import KeranjangList from "./KeranjangList.vue";
+import KeranjangList from "./Keranjang.vue";
 import RingkasanBelanja from "./RingkasanBelanja.vue";
 
 export default {
@@ -23,7 +23,3 @@ export default {
   
 }
 </script>
-
-<style>
-
-</style>

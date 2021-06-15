@@ -30,8 +30,6 @@
         Pilih Pembayaran
       </button>
     </div>
-    
-    
   </div>
 </template>
 
@@ -52,7 +50,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

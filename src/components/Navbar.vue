@@ -22,7 +22,7 @@
       <ul class="menu">
         <li @click="toggleShowKeranjang">
           <div class="relative">
-            <div class="keranjang-count">3</div>
+            <div class="keranjang-count">6</div>
             <icon-keranjang/>
           </div>
         </li>
@@ -53,7 +53,7 @@
         </li>
       </ul>
     </div>
-    <Keranjang v-if="showKeranjang" />
+    <MenuKeranjang v-if="showKeranjang" />
   </nav>
 </template>
 
@@ -67,7 +67,7 @@ import {
   IconUser,
   IconSearch
 } from '@/components/icons';
-import Keranjang from '@/components/Keranjang.vue';
+import MenuKeranjang from '@/components/MenuKeranjang.vue';
 
 export default {
   components: { 
@@ -77,7 +77,7 @@ export default {
     IconToko,
     IconUser,
     IconSearch,
-    Keranjang 
+    MenuKeranjang 
   },
   setup(){
     const isAuthenticate = ref(false)

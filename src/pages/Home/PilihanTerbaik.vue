@@ -20,10 +20,10 @@
         }"
         :data="sliderData"
       >
-        <template #body="{ slideData: { title, price, rating, sold }}"> 
+        <template #body="{ slideData: { title, image, price, rating, sold }}"> 
           <ProdukCard
             :title="title"
-            image=""
+            :image="image"
             :price="price"
             :rating="rating"
             :sold="sold"
@@ -41,6 +41,11 @@ import { reactive } from "vue";
 import SwiperSlider from "@/components/SwiperSlider.vue";
 import ProdukCard from "@/components/ProdukCard.vue";
 
+import jaket_black from "@/assets/images/jaket_black.jpg";
+import jaket_green from "@/assets/images/jaket_green.jpg";
+import jaket_navy from "@/assets/images/jaket_navy.jpg";
+import jaket_red from "@/assets/images/jaket_red.jpg";
+
 export default {
   components: {
     SwiperSlider,
@@ -50,30 +55,28 @@ export default {
     const sliderData = reactive([
         {
           title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta placeat beatae neque laborum labore.',
+          image: jaket_black,
           price: 1000000,
           rating: 5.0,
           sold: 1000
         },
         {
           title: 'adipisicing elit. Explicabo dicta placeat beatae neque laborum labore.',
+          image: jaket_green,
           price: 1000000,
           rating: 5.0,
           sold: 1000
         },
         {
           title: 'dolor sit amet consectetur adipisicing elit. icta placeat beatae neque laborum labore.',
+          image: jaket_navy,
           price: 1000000,
           rating: 5.0,
           sold: 1000
         },
         {
           title: 'Explicabo dicta placeat beatae neque laborum labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
-          price: 1000000,
-          rating: 5.0,
-          sold: 1000
-        },
-        {
-          title: 'beatae neque laborum labore Explicabo dicta placeat beatae neque laborum labore.',
+          image: jaket_red,
           price: 1000000,
           rating: 5.0,
           sold: 1000

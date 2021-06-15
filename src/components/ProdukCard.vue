@@ -3,7 +3,7 @@
 
     <!-- Image Product -->
     <div class="h-[60%] md:h-[65%] overflow-hidden w-full bg-gradient-to-br from-shopperly-green-400 to-shopperly-green-300">
-      <img :src="image" alt="product image">
+      <img :src="image" class="image-thumbnail" alt="product image">
     </div>
 
     <!-- Description Product -->
@@ -81,7 +81,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

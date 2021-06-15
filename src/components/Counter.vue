@@ -1,7 +1,7 @@
 <template>
   <div class="px-2 py-1 flex items-center justify-between">
     <button class="button-counter" @click="decrementJumlahItem()">-</button>
-    <input ref="elementJumlahItem" type="text" class="border-b-2 w-1/2 focus:outline-none focus:border-shopperly-green-400 text-center transition" @change="validateJumlahItem" v-model="jumlahItem">
+    <input ref="elementJumlahItem" type="text" class="border-b-2 w-1/2 focus:outline-none focus:border-shopperly-green-400 text-center transition !ring-0" @change="validateJumlahItem" v-model="jumlahItem">
     <button class="button-counter" @click="IncrementJumlahItem()">+</button>
   </div>
 </template>
