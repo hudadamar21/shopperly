@@ -1,8 +1,8 @@
 <template>
   <MainLayout noFooter>
-    <div class="flex items-start justify-between w-full px-10 gap-10">
+    <div class="flex flex-col lg:flex-row items-start justify-between w-full px-0 lg:px-10 gap-10">
       <KeranjangList />
-      <div class="sticky top-0 pt-3 w-1/3">
+      <div class="lg:sticky top-0 pt-3 w-full lg:w-1/3">
         <RingkasanBelanja/>
       </div>
     </div>

@@ -9,18 +9,22 @@
       </div>
 
       <!-- product list on cart -->
-      <div class="my-1 pr-3 max-h-[25rem] overflow-auto">
-        <div v-for="(product, i) of keranjangProductList" :key="i" class="border-b flex items-center justify-between py-2">
+      <ul class="my-1 pr-3 max-h-[25rem] overflow-auto">
+        <li 
+          v-for="(product, i) of keranjangProductList" 
+          :key="i" 
+          class="border-b flex items-center justify-between py-2 hover:bg-gray-100 cursor-pointer"
+        >
           <div class="flex">
-            <img src="#" class="bg-gray-300 w-16 h-16 object-cover">
+            <img :src="product.image" class="bg-gray-300 w-16 h-16 object-cover">
             <div class="ml-2">
               <h3 class="line-clamp-1 font-bold">{{ product.title }}</h3>
               <p class="text-sm">{{ product.jumlah }} Barang (100kg)</p>
             </div>
           </div>
           <p class="text-red-500 w-1/3 text-right font-semibold">{{ product.price }}</p>
-        </div>
-      </div>
+        </li>
+      </ul>
 
     </div>
   </div>
@@ -30,36 +34,47 @@
 import { reactive } from "vue";
 import { formatPrice } from "@/utils/format";
 
+import jaket_black from "@/assets/images/jaket_black.jpg";
+import jaket_green from "@/assets/images/jaket_green.jpg";
+import jaket_navy from "@/assets/images/jaket_navy.jpg";
+import jaket_red from "@/assets/images/jaket_red.jpg";
+
 export default {
   setup(){
     const productLists = reactive([
       {
         title: 'Title yang kepanjangan ya haha',
+        image: jaket_black,
         jumlah: 200,
         price: 1200000000
       },
       {
         title: 'Title lumayan panjang',
+        image: jaket_green,
         jumlah: 200,
         price: 2000000
       },
       {
         title: 'Title biasa',
+        image: jaket_navy,
         jumlah: 5,
         price: 100000
       },
       {
         title: 'Title yang kepanjangan ya haha',
+        image: jaket_red,
         jumlah: 200,
         price: 1200000000
       },
       {
         title: 'Title lumayan panjang',
+        image: jaket_black,
         jumlah: 200,
         price: 2000000
       },
       {
         title: 'Title biasa',
+        image: jaket_navy,
         jumlah: 5,
         price: 100000
       },

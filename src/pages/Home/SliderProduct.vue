@@ -1,7 +1,7 @@
 <template>
   <!-- Slider Product -->
   <SwiperSlider 
-    classSwiper="h-[350px] rounded-lg rounded-br-[5rem] rounded-tl-[4rem]"
+    classSwiper="h-[200px] lg:h-[350px] rounded-lg rounded-br-[5rem] rounded-tl-[4rem]"
     classSlide="bg-shopperly-green-100"
     :slideSpeed="1000"
     autoplay
@@ -21,8 +21,8 @@ import { reactive } from "vue";
 
 import SwiperSlider from "@/components/SwiperSlider.vue";
 
-import image_slider1 from "@/assets/images/image_slider1.png";
-import image_slider2 from "@/assets/images/image_slider2.png";
+import image_slider1 from "@/assets/images/image_slider_1.svg";
+import image_slider2 from "@/assets/images/image_slider_2.svg";
 
 export default {
   components: {

@@ -18,7 +18,7 @@
     </div>
 
     <!-- Menus -->
-    <div class="flex items-center pl-5 h-full">
+    <div class="flex items-center pl-2 lg:pl-5 h-full">
       <ul class="menu">
         <li @click="toggleShowKeranjang">
           <div class="relative">
@@ -33,7 +33,7 @@
           <icon-pesan/>
         </li>
       </ul>
-      <div class="h-[80%] w-px bg-shopperly-green-100 mx-5"></div>
+      <div class="h-[80%] w-px bg-shopperly-green-100 mx-2 lg:mx-5"></div>
       <ul class="menu" >
         <li>
           <icon-toko/>

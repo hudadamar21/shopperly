@@ -2,9 +2,9 @@
   <!-- Product Populer -->
   <section class="mt-24 flex flex-col items-center">
     <SectionTitle name="Produk Populer"/>
-    <div class="flex items-center justify-evenly w-full mt-3 flex-wrap">
+    <div class="flex items-start justify-evenly w-full mt-3 flex-wrap">
       <SwiperSlider 
-        classSwiper="h-[385px] px-1"
+        classSwiper="px-1"
         classSlide="rounded-md"
         withNavigation
         lookMoreTo="/"

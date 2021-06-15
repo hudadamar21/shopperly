@@ -9,12 +9,16 @@ import IconPesan from "./IconPesan.vue";
 import IconUser from "./IconUser.vue";
 import IconToko from "./IconToko.vue";
 import IconSearch from "./IconSearch.vue";
-import IconGoogle from "./IconGoogle.vue";
-import IconFacebook from "./IconFacebook.vue";
 import IconShowPassword from "./IconShowPassword.vue";
 import IconStar from "./IconStar.vue";
 import IconLove from "./IconLove.vue";
 import IconShare from "./IconShare.vue";
+
+import IconGoogle from "./IconGoogle.vue";
+import IconFacebook from "./IconFacebook.vue";
+import IconTelegram from "./IconTelegram.vue";
+import IconWhatsapp from "./IconWhatsapp.vue";
+import IconTwitter from "./IconTwitter.vue";
 
 
 export {
@@ -24,8 +28,6 @@ export {
   IconUser,
   IconToko,
   IconSearch,
-  IconGoogle,
-  IconFacebook,
   IconBack,
   IconShowPassword,
   IconStar,
@@ -33,5 +35,11 @@ export {
   IconChat,
   IconLove,
   IconShare,
-  IconChecklist
+  IconChecklist,
+
+  IconGoogle,
+  IconFacebook,
+  IconTelegram,
+  IconWhatsapp,
+  IconTwitter,
 }

@@ -2,7 +2,7 @@
   <div class="border lg:rounded-r-3xl h-full">
     <div class="flex items-center py-3 border-b pl-5">
       <img 
-        src="" 
+        src="@/assets/images/profile_default.jpg" 
         class="w-10 lg:w-16 h-10 lg:h-16 rounded-full object-center object-cover bg-gray-300 overflow-hidden" 
         alt="profile image"
       >

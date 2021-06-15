@@ -26,11 +26,11 @@
     </div>
 
     <!-- List Alamat -->
-    <ul class="flex flex-col gap-10">
+    <ul class="flex flex-col gap-5">
       <li 
         v-for="alamat of alamatList" 
         :key="alamat.alamatName"
-        class="relative border shadow border-shopperly-green-400 rounded-md p-5"
+        class="relative border shadow border-shopperly-green-400 rounded-md px-5 py-3"
       >
         <div class="absolute top-5 left-0 w-[0.6rem] h-7 rounded-r-lg bg-shopperly-green-400"></div>
         <div class="flex items-center justify-between">
@@ -52,7 +52,7 @@
             </div>
           </div>
 
-          <button v-if="alamat.isUsed" class="ml-5 rounded-full p-2 hover:bg-gray-100 text-shopperly-green-400">
+          <button v-if="alamat.isUsed" class="text-shopperly-green-400 !ring-0">
             <!-- checklist icon -->
             <IconChecklist/>
           </button>
@@ -85,7 +85,7 @@ export default {
         alamatName: 'Rumah',
         username: 'Nama User',
         nomor: '08124124312',
-        alamat: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit atque quod corporis rerum. Ducimus nobis velit ut eveniet, quos fuga rerum labore expedita magnam porro eos sit animi nostrum vero unde, accusantium ipsa dolorem debitis, hic provident itaque pariatur! Minima!',
+        alamat: 'Jl.lorem ipsum, Kec. lorem, Kota ipsum, Jawa Barat 12123',
         isUsed: true
       },
       {

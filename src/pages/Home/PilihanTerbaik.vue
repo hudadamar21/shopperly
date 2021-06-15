@@ -8,7 +8,7 @@
     </div>
     <div class="absolute w-[75%] top-1/2 transform -translate-y-1/2 right-0 md:h-2/3">
       <SwiperSlider 
-        classSwiper="h-[385px] px-1"
+        classSwiper="px-1"
         classSlide="rounded-md "
         withNavigation
         withLoopSlider

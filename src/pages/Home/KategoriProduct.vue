@@ -1,16 +1,20 @@
 <template>
   <!-- Kategori Product -->
-  <section class="h-[400px] grid grid-cols-5 grid-rows-3 gap-3 mt-10">
-    <div class="col-span-3 row-span-2 bg-shopperly-green-100">
-      <img src="@/assets/images/events.png" class="image-thumbnail" alt="events">
+  <section class="min-h-[400px] flex flex-col items-center gap-3 mt-10">
+    <div class="flex flex-col lg:flex-row gap-3">
+      <div class="bg-shopperly-green-100">
+        <img src="@/assets/images/events.svg" class="image-thumbnail" alt="events">
+      </div>
+      <div class="flex gap-3">
+        <div class="bg-shopperly-green-100 w-1/2">
+          <img src="@/assets/images/coming_soon.svg" class="image-thumbnail" alt="coming soon">
+        </div>
+        <div class="bg-shopperly-green-100 w-1/2">
+          <img src="@/assets/images/coming_soon.svg" class="image-thumbnail" alt="coming soon">
+        </div>
+      </div>
     </div>
-    <div class="col-span-1 row-span-2 bg-shopperly-green-100">
-      <img src="@/assets/images/coming_soon.png" class="image-thumbnail" alt="coming soon">
-    </div>
-    <div class="col-span-1 row-span-2 bg-shopperly-green-100">
-      <img src="@/assets/images/coming_soon.png" class="image-thumbnail" alt="coming soon">
-    </div>
-    <div class="category relative overflow-hidden col-span-5 row-span-1 rounded-md bg-shopperly-green-100 grid place-items-center">
+    <div class="category relative overflow-hidden rounded-md bg-shopperly-green-100 grid place-items-center py-4">
       <SwiperSlider 
         classSwiper="w-full px-2"
         classSlide="rounded-md !w-auto"
@@ -20,10 +24,10 @@
       >
         <template #body="{ slideData: { icon, name }}"> 
           <div class="border-2 border-shopperly-green-400 rounded-2xl flex items-center px-2.5 py-1.5 cursor-pointer">
-          <div class="bg-shopperly-green-400 rounded-full p-3">
+          <div class="bg-shopperly-green-400 rounded-full p-2 lg:p-3">
             {{ icon }}
           </div>
-          <h3 class="pl-2 text-2xl">{{ name }}</h3>
+          <h3 class="pl-2 text-lg lg:text-2xl">{{ name }}</h3>
         </div>
         </template>
       </SwiperSlider>

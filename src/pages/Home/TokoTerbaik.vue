@@ -17,7 +17,16 @@
           }
         }"
       :data="sliderData"
-    />
+    >
+      <template #body="{ slideData }">
+        <div :class="[
+          'w-full h-full grid place-content-center rounded-md cursor-pointer',
+          slideData.bg
+        ]">
+          <h1 class="font-bold text-white text-2xl">{{  slideData.text }}</h1>
+        </div>
+      </template>
+    </SwiperSlider>
   </section>
 </template>
 
@@ -35,22 +44,20 @@ export default {
   setup(){
     const sliderData = reactive([
         {
-          text: 'hello'
+          text: 'Samsung',
+          bg: 'bg-gradient-to-br from-blue-500 to-blue-700'
         },
         {
-          text: 'world'
+          text: 'Xiaomi',
+           bg: 'bg-gradient-to-br from-yellow-400 to-yellow-600'
         },
         {
-          text: 'next1'
+          text: 'Huawei',
+           bg: 'bg-gradient-to-br from-green-400 to-green-600'
         },
         {
-          text: 'next2'
-        },
-        {
-          text: 'next3'
-        },
-        {
-          text: 'next4'
+          text: 'Apple',
+           bg: 'bg-gradient-to-br from-gray-500 to-gray-700'
         },
       ])
     return {

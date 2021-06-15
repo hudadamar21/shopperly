@@ -1,7 +1,7 @@
 <template>
   <div class="p-8 border flex flex-col items-center flex-grow">
     <div class="w-48 h-48 rounded-full bg-gray-300 shadow-md overflow-hidden">
-      <img src="" class="object-cover object-center w-full h-full" alt="profile image">
+      <img src="@/assets/images/profile_default.jpg" class="object-cover object-center w-full h-full" alt="profile image">
     </div>
     <div>
       <button class="w-full py-2 border-2 text-xl mt-7">

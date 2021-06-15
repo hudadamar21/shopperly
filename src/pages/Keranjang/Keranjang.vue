@@ -1,5 +1,5 @@
 <template>
-  <div class="w-2/3">
+  <div class="w-full md:w-2/3">
     <h1 class="text-2xl font-bold mb-3">Keranjang</h1>
     <div class="sticky top-0 bg-white flex items-center justify-between border-b-4 py-2 mb-2">
       <div class="flex items-center ">
@@ -38,6 +38,11 @@ import { reactive } from 'vue'
 
 import KeranjangList from "./KeranjangItem.vue";
 
+import jaket_black from "@/assets/images/jaket_black.jpg";
+import jaket_green from "@/assets/images/jaket_green.jpg";
+import jaket_navy from "@/assets/images/jaket_navy.jpg";
+import jaket_red from "@/assets/images/jaket_red.jpg";
+
 export default {
   components: {
     KeranjangList
@@ -49,7 +54,7 @@ export default {
         alamatToko: 'Alamat Toko',
         listBarang: [
           {
-            image: '',
+            image: jaket_black,
             nama: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reiciendis amet id in magni quisquam eius, corrupti consequuntur qui libero.',
             harga: 'Rp. 500.000',
           }
@@ -60,12 +65,12 @@ export default {
         alamatToko: 'Alamat Toko',
         listBarang: [
           {
-            image: '',
+            image: jaket_red,
             nama: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reiciendis amet id in magni quisquam eius, corrupti consequuntur qui libero.',
             harga: 'Rp. 1000',
           },
           {
-            image: '',
+            image: jaket_navy,
             nama: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reiciendis amet id in magni quisquam eius, corrupti consequuntur qui libero.',
             harga: 'Rp. 1.000.000',
           }
@@ -76,12 +81,12 @@ export default {
         alamatToko: 'Alamat Toko',
         listBarang: [
           {
-            image: '',
+            image: jaket_green,
             nama: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reiciendis amet id in magni quisquam eius, corrupti consequuntur qui libero.',
             harga: 'Rp. 1000',
           },
           {
-            image: '',
+            image: jaket_red,
             nama: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reiciendis amet id in magni quisquam eius, corrupti consequuntur qui libero.',
             harga: 'Rp. 1.000.000',
           }
