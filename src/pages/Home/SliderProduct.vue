@@ -21,8 +21,8 @@ import { reactive } from "vue";
 
 import SwiperSlider from "@/components/SwiperSlider.vue";
 
-import image_slider1 from "@/assets/images/image_slider_1.svg";
-import image_slider2 from "@/assets/images/image_slider_2.svg";
+import image_slider1 from "@/assets/images/Image_slider_1.svg";
+import image_slider2 from "@/assets/images/Image_slider_2.svg";
 
 export default {
   components: {
