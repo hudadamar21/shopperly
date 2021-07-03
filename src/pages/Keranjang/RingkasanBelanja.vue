@@ -26,9 +26,9 @@
         Dengan mengaktifkan asuransi, Saya menyetujui 
         <span class="text-blue-400">syarat dan ketentuan yang berlaku.</span>
       </p>
-      <button class="mt-2 w-full px-4 py-2 rounded-md bg-shopperly-green-400 filter hover:brightness-110 text-lg font-semibold text-white">
-        Pilih Pembayaran
-      </button>
+      <router-link to="/checkout" class="block text-center mt-2 w-full px-4 py-2 rounded-md bg-shopperly-green-400 filter hover:brightness-110 text-lg font-semibold text-white">
+        Checkout
+      </router-link>
     </div>
   </div>
 </template>

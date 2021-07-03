@@ -4,6 +4,8 @@ import IconChat from "./IconChat.vue";
 import IconChecklist from "./IconChecklist.vue";
 
 import IconKeranjang from "./IconKeranjang.vue";
+import IconStore from "./IconStore.vue";
+import IconBoxProduct from "./IconBoxProduct.vue";
 import IconNotifikasi from "./IconNotifikasi.vue";
 import IconPesan from "./IconPesan.vue";
 import IconUser from "./IconUser.vue";
@@ -23,6 +25,8 @@ import IconTwitter from "./IconTwitter.vue";
 
 export {
   IconKeranjang,
+  IconStore,
+  IconBoxProduct,
   IconNotifikasi,
   IconPesan,
   IconUser,

@@ -1,16 +1,19 @@
 <template>
   <div :class="{ 'border-b' : borderBottom}">
-    <header class="flex items-center justify-between p-3 cursor-pointer" @click="toggleExpand">
+    <header :class="headerClass" class="flex items-center justify-between p-3 cursor-pointer" @click="toggleExpand">
       <h2 class="text-lg font-medium">{{ title }}</h2>
-      <div class=" hover:opacity-70">
+      <div class="hover:opacity-70 transform transition-transform duration-300" :class="expand ? 'rotate-180' : 'rotate-0'">
         <icon-arrow-down/>
       </div>
     </header>
-    <main 
-      class="overflow-hidden transition-all duration-500 px-3"
-      :class="expand ? maxheight : 'max-h-0'"  
+    <main
+      :class="[
+        mainClass,
+        expand ? `${maxheight} mb-4` : 'max-h-0',
+        'overflow-hidden transition-all duration-500 px-3'
+      ]"  
     >
-      <slot/>
+      <slot :expand="expand"/>
     </main>
   </div>
 </template>
@@ -32,12 +35,11 @@ export default {
     },
     expand: {
       type: Boolean,
-      required: true
+      default: true
     },
-    borderBottom: {
-      type: Boolean,
-      
-    }
+    borderBottom: { type: Boolean },
+    headerClass: { type: String },
+    mainClass: { type: String }
   },
   setup(props){
     const expand = ref(props.expand)

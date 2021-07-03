@@ -4,7 +4,7 @@
     <!-- Image Product and Info Toko -->
     <div class="mb-4 lg:mb-0 w-full lg:w-[35%]">
       <!-- Images Product -->
-      <div class="mb-8">
+      <div class="mb-8 flex flex-col items-center">
         <div class="w-full lg:w-[300px] h-[400px] bg-shopperly-blue rounded-md mb-2">
           <img :src="selectedImage" class="object-cover h-full w-full object-center" alt="">
         </div>

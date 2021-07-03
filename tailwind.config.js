@@ -12,6 +12,7 @@ module.exports = {
           400: '#00ADB5'
         },
         'shopperly-blue': '#005FA4',
+        'shopperly-lightblue': '#08B5FF',
         'shopperly-gray': {
           700: '#393E46',
           800: '#222831'

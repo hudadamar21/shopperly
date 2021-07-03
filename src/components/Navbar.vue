@@ -2,20 +2,10 @@
   <nav class="relative h-20 bg-white flex items-center justify-evenly text-gray-700 rounded-b-3xl shadow mb-10 px-6 md:px-10">
 
     <!-- Brand Title -->
-    <router-link to="/" class="brand hidden md:block text-3xl md:text-5xl pr-5 text-gradient bg-gradient-to-r from-shopperly-blue to-shopperly-green-300">
-      Shopperly
-    </router-link>
+    <brand-title class="hidden md:block"/>
 
     <!-- Search Product -->
-    <div class="relative flex-grow">
-      <input
-      type="text" 
-      placeholder="Cari Produk.."
-      class="px-3 py-1 w-full rounded-lg border-2 border-shopperly-green-200 focus:outline-none !ring-shopperly-green-200 !ring-opacity-100">
-      <button class="absolute top-1/2 transform -translate-y-1/2 right-3 rounded-full focus:outline-none text-shopperly-green-400 hover:text-shopperly-green-300">
-        <icon-search/>
-      </button>
-    </div>
+    <SearchProduct />
 
     <!-- Menus -->
     <div class="flex items-center pl-2 lg:pl-5 h-full">
@@ -64,10 +54,12 @@ import {
   IconNotifikasi, 
   IconPesan, 
   IconToko, 
-  IconUser,
-  IconSearch
+  IconUser  
 } from '@/components/icons';
+import BrandTitle from '@/components/BrandTitle.vue';
 import MenuKeranjang from '@/components/MenuKeranjang.vue';
+import SearchProduct from '@/components/SearchProduct.vue';
+
 
 export default {
   components: { 
@@ -76,8 +68,9 @@ export default {
     IconPesan,
     IconToko,
     IconUser,
-    IconSearch,
-    MenuKeranjang 
+    BrandTitle,
+    MenuKeranjang,
+    SearchProduct
   },
   setup(){
     const isAuthenticate = ref(false)

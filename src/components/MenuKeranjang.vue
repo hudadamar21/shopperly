@@ -22,7 +22,7 @@
               <p class="text-sm">{{ product.jumlah }} Barang (100kg)</p>
             </div>
           </div>
-          <p class="text-red-500 w-1/3 text-right font-semibold">{{ product.price }}</p>
+          <p class="text-[#FA591D] w-1/3 text-right font-semibold">{{ product.price }}</p>
         </li>
       </ul>
 
